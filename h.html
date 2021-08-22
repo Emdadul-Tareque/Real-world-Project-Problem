@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="grand-parent">
+      <h2>Hello</h2>
+      <ul id="parent">
+        <li>1st button</li>
+        <li>2nd button</li>
+        <li id="child">3rd button</li>
+      </ul>
+    </section>
+
+    <!-- <div id="parent">
+      <div id="key-pad">
+        <button class="button">999</button>
+      </div>
+      <div id="storage">
+        <button class="button">1000</button>
+      </div>
+      <div id="storage1">
+        <button class="button">1200</button>
+      </div>
+    </div> -->
+
+    <div></div>
+    <p></p>
+
+    <script>
+      function event() {
+        document.getElementById("child").addEventListener("click", function () {
+          // event.target.innerText = 1 + parseInt(event.target.innerText);
+          // console.log(event.target.innerText);
+          console.log("child clicked");
+        });
+        document
+          .getElementById("parent")
+          .addEventListener("click", function () {
+            // event.target.innerText = 2 + parseInt(event.target.innerText);
+            // console.log(event.target.innerText);
+            console.log(" parent  clicked");
+          });
+        document
+          .getElementById("grand-parent")
+          .addEventListener("click", function () {
+            // event.target.innerText = 2 + parseInt(event.target.innerText);
+            // console.log(event.target.innerText);
+            console.log("grand parent  clicked");
+          });
+      }
+
+      event();
+
+      //   document
+      //     .getElementById("storage")
+      //     .addEventListener("click", function (event) {
+      //       const value = document.getElementById("key-pad").innerText;
+      //       event.target.innerText =
+      //         parseInt(event.target.innerText) + parseInt(value);
+      //       //   event.target.innerText = ;
+      //       //   console.log(event.target.innerText);
+      //     });
+    </script>
+  </body>
+</html>
